@@ -28,8 +28,18 @@ namespace HiringHub.Controllers
         {
             try
             {
-                await _candidateService.UpsertCandidate(candidate);
-                return Ok(candidate);
+                if (ModelState.IsValid)
+                {
+                    await _candidateService.UpsertCandidate(candidate);
+                    return Ok(candidate);
+                }
+                else {
+                    var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                     .Select(e => e.ErrorMessage)
+                                     .ToList();
+
+                    return BadRequest(new { Message = "Validation failed", Errors = errors[0] });
+                }
             }
             catch (ArgumentException ex)
             {

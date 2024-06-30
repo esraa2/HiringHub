@@ -1,5 +1,7 @@
 ﻿using HiringHub.DLL.Repositories;
 using Microsoft.Extensions.Caching.Memory;
+using System.ComponentModel.DataAnnotations;
+using System.Linq.Expressions;
 
 namespace HiringHub.BLL.Services
 {
@@ -20,9 +22,23 @@ namespace HiringHub.BLL.Services
             _cache = cache; 
         }
         #endregion
+       
         #region --Methods
         public async Task UpsertCandidate(HiringHub.DLL.Models.Candidate candidate)
         {
+            #region -- Testing validation on level of service
+
+            var validationContext = new ValidationContext(candidate, serviceProvider: null, items: null);
+            var validationResults = new List<ValidationResult>();
+            var isValid = Validator.TryValidateObject(candidate, validationContext, validationResults, validateAllProperties: true);
+
+            if (!isValid)
+            {
+                var errorMessages = validationResults.Select(vr => vr.ErrorMessage);
+                throw new ArgumentException($"Invalid candidate data: {string.Join(", ", errorMessages)}");
+            }
+            #endregion
+
             var existingCandidate = _candidateRepository.GetAll().FirstOrDefault(c => c.Email == candidate.Email);
 
             #region -- Update The existing Candidate
@@ -46,11 +62,15 @@ namespace HiringHub.BLL.Services
                 _candidateRepository.Add(candidate);
             }
             #endregion
-
-            _candidateRepository.SaveChanges();
+            try
+            {
+                _candidateRepository.SaveChanges();
+            }
+            catch(Exception ex){
+                throw ex;
+            }
             _cache.Remove(CandidateCacheKey);  //remove cache after add or update
         }
-
 
         public  IEnumerable<HiringHub.DLL.Models.Candidate> GetAllCandidates()
         {
