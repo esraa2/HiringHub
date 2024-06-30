@@ -1,28 +1,41 @@
-using Candidate.BLL.Services;
-using Candidate.DLL.DB_Context;
+using HiringHub.BLL.Services;
+using HiringHub.DLL.DB_Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace CandidateApi.Controllers
+namespace HiringHub.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class CandidateController : ControllerBase
     {
-        private readonly CandidateContext _context;
+        private readonly CandidateService _candidateService;
 
-        public CandidateController(CandidateContext context)
+        public CandidateController(CandidateService candidateService)
         {
-            _context = context;
+            _candidateService = candidateService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllCandidates()
+        {
+            var candidates =  _candidateService.GetAllCandidates();
+            return Ok(candidates);
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpsertCandidate(Candidate.DLL.Models.Candidate candidate)
+        public async Task<IActionResult> UpsertCandidate(HiringHub.DLL.Models.Candidate candidate)
         {
-            CandidateService service = new CandidateService(_context); 
-            await service.UpsertCandidate(candidate);
-            return Ok(candidate);
+            try
+            {
+                await _candidateService.UpsertCandidate(candidate);
+                return Ok(candidate);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
         }
-       
+
     }
 }

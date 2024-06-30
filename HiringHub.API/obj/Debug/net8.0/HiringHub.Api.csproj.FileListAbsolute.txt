@@ -138,3 +138,4 @@ D:\Task\HiringHub\HiringHub.API\obj\Debug\net8.0\refint\HiringHub.Api.dll
 D:\Task\HiringHub\HiringHub.API\obj\Debug\net8.0\HiringHub.Api.pdb
 D:\Task\HiringHub\HiringHub.API\obj\Debug\net8.0\HiringHub.Api.genruntimeconfig.cache
 D:\Task\HiringHub\HiringHub.API\obj\Debug\net8.0\ref\HiringHub.Api.dll
+D:\Task\HiringHub\HiringHub.API\obj\Debug\net8.0\HiringHub.Api.sourcelink.json

@@ -1,4 +1,6 @@
-using Candidate.DLL.DB_Context;
+using HiringHub.BLL.Services;
+using HiringHub.DLL.DB_Context;
+using HiringHub.DLL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CandidateContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+builder.Services.AddScoped<CandidateService>();
 builder.Services.AddControllers();
 builder.Services.AddMemoryCache();
 var app = builder.Build();

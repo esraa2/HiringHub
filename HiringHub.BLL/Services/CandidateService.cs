@@ -1,23 +1,29 @@
-﻿using Candidate.DLL.DB_Context;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HiringHub.DLL.Repositories;
+using Microsoft.Extensions.Caching.Memory;
 
-namespace Candidate.BLL.Services
+namespace HiringHub.BLL.Services
 {
     public class CandidateService
     {
-        private readonly CandidateContext _context;
-        public CandidateService(CandidateContext context)
+        #region -- Fields
+        private readonly IRepository<HiringHub.DLL.Models.Candidate> _candidateRepository;
+        
+        //Cache
+        private readonly IMemoryCache _cache;
+        private const string CandidateCacheKey = "candidates_cache";
+        #endregion
+
+        #region --Constructors
+        public CandidateService(IRepository<HiringHub.DLL.Models.Candidate> candidateRepository, IMemoryCache cache)
         {
-            _context = context;
+            _candidateRepository = candidateRepository;
+            _cache = cache; 
         }
-        public async Task UpsertCandidate(Candidate.DLL.Models.Candidate candidate)
+        #endregion
+        #region --Methods
+        public async Task UpsertCandidate(HiringHub.DLL.Models.Candidate candidate)
         {
-            var existingCandidate = await _context.Candidates.FirstOrDefaultAsync(c => c.Email == candidate.Email);
+            var existingCandidate = _candidateRepository.GetAll().FirstOrDefault(c => c.Email == candidate.Email);
 
             #region -- Update The existing Candidate
             if (existingCandidate != null)
@@ -29,19 +35,41 @@ namespace Candidate.BLL.Services
                 existingCandidate.LinkedInProfileUrl = candidate.LinkedInProfileUrl;
                 existingCandidate.GitHubProfileUrl = candidate.GitHubProfileUrl;
                 existingCandidate.Comment = candidate.Comment;
-             
-                _context.Candidates.Update(existingCandidate);
+
+                _candidateRepository.Update(existingCandidate);
             }
             #endregion
 
             #region -- Create New Candidate
             else
             {
-                _context.Candidates.Add(candidate);
+                _candidateRepository.Add(candidate);
             }
             #endregion
 
-            await _context.SaveChangesAsync();
+            _candidateRepository.SaveChanges();
+            _cache.Remove(CandidateCacheKey);  //remove cache after add or update
         }
+
+
+        public  IEnumerable<HiringHub.DLL.Models.Candidate> GetAllCandidates()
+        {
+            if (!_cache.TryGetValue(CandidateCacheKey, out IEnumerable<HiringHub.DLL.Models.Candidate> candidates))
+            {
+                candidates =  _candidateRepository.GetAll();
+               
+                var cacheEntryOptions = new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1)
+                };
+
+                // Save data in cache
+                _cache.Set(CandidateCacheKey, candidates, cacheEntryOptions);
+            }
+
+            return candidates;
+        }
+
+        #endregion
     }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Candidate.DLL.Models
+namespace HiringHub.DLL.Models
 {
     public class Candidate
     {
@@ -25,7 +20,8 @@ namespace Candidate.DLL.Models
 
         [Required]
         [StringLength(50)]
-        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Invalid email format.")]
+       // [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Invalid email format.")]
+        [EmailAddress]
         public string Email { get; set; }
         public string CallTimeInterval { get; set; }
 

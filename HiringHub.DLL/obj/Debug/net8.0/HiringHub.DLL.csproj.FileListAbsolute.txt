@@ -12,3 +12,4 @@ D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\refint\HiringHub.DLL.dll
 D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.pdb
 D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.genruntimeconfig.cache
 D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\ref\HiringHub.DLL.dll
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.sourcelink.json
