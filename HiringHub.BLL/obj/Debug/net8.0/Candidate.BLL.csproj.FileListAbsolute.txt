@@ -1,0 +1,15 @@
+D:\Task\CandidateApi\Candidate.BLL\bin\Debug\net8.0\Candidate.BLL.deps.json
+D:\Task\CandidateApi\Candidate.BLL\bin\Debug\net8.0\Candidate.BLL.dll
+D:\Task\CandidateApi\Candidate.BLL\bin\Debug\net8.0\Candidate.BLL.pdb
+D:\Task\CandidateApi\Candidate.BLL\bin\Debug\net8.0\Candidate.DLL.dll
+D:\Task\CandidateApi\Candidate.BLL\bin\Debug\net8.0\Candidate.DLL.pdb
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.csproj.AssemblyReference.cache
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.AssemblyInfoInputs.cache
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.AssemblyInfo.cs
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.csproj.CoreCompileInputs.cache
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidat.46414077.Up2Date
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.dll
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\refint\Candidate.BLL.dll
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\Candidate.BLL.pdb
+D:\Task\CandidateApi\Candidate.BLL\obj\Debug\net8.0\ref\Candidate.BLL.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KC8gwtX1a+aSrvr64Udwk8a7HOmMbqE3YvE0boOS3sw=",
+  "Source": "HiringHub.Api",
+  "BasePath": "_content/HiringHub.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,15 @@
+D:\Task\HiringHub\HiringHub.BLL\bin\Debug\net8.0\HiringHub.BLL.deps.json
+D:\Task\HiringHub\HiringHub.BLL\bin\Debug\net8.0\HiringHub.BLL.dll
+D:\Task\HiringHub\HiringHub.BLL\bin\Debug\net8.0\HiringHub.BLL.pdb
+D:\Task\HiringHub\HiringHub.BLL\bin\Debug\net8.0\HiringHub.DLL.dll
+D:\Task\HiringHub\HiringHub.BLL\bin\Debug\net8.0\HiringHub.DLL.pdb
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.csproj.AssemblyReference.cache
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.AssemblyInfoInputs.cache
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.AssemblyInfo.cs
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.csproj.CoreCompileInputs.cache
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHu.D9981209.Up2Date
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.dll
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\refint\HiringHub.BLL.dll
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\HiringHub.BLL.pdb
+D:\Task\HiringHub\HiringHub.BLL\obj\Debug\net8.0\ref\HiringHub.BLL.dll

@@ -1,0 +1,14 @@
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.csproj.AssemblyReference.cache
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.AssemblyInfoInputs.cache
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.AssemblyInfo.cs
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.csproj.CoreCompileInputs.cache
+D:\Task\CandidateApi\Candidate.DLL\bin\Debug\net8.0\Candidate.DLL.deps.json
+D:\Task\CandidateApi\Candidate.DLL\bin\Debug\net8.0\Candidate.DLL.dll
+D:\Task\CandidateApi\Candidate.DLL\bin\Debug\net8.0\Candidate.DLL.pdb
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.dll
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\refint\Candidate.DLL.dll
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.pdb
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\ref\Candidate.DLL.dll
+D:\Task\CandidateApi\Candidate.DLL\bin\Debug\net8.0\Candidate.DLL.runtimeconfig.json
+D:\Task\CandidateApi\Candidate.DLL\obj\Debug\net8.0\Candidate.DLL.genruntimeconfig.cache

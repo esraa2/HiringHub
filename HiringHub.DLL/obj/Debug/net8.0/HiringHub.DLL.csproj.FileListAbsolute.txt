@@ -1,0 +1,14 @@
+D:\Task\HiringHub\HiringHub.DLL\bin\Debug\net8.0\HiringHub.DLL.deps.json
+D:\Task\HiringHub\HiringHub.DLL\bin\Debug\net8.0\HiringHub.DLL.runtimeconfig.json
+D:\Task\HiringHub\HiringHub.DLL\bin\Debug\net8.0\HiringHub.DLL.dll
+D:\Task\HiringHub\HiringHub.DLL\bin\Debug\net8.0\HiringHub.DLL.pdb
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.csproj.AssemblyReference.cache
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.AssemblyInfoInputs.cache
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.AssemblyInfo.cs
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.csproj.CoreCompileInputs.cache
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.dll
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\refint\HiringHub.DLL.dll
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.pdb
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\HiringHub.DLL.genruntimeconfig.cache
+D:\Task\HiringHub\HiringHub.DLL\obj\Debug\net8.0\ref\HiringHub.DLL.dll
